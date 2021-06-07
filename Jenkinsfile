@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                     cd frontend-test/
-                    npm install && npm run cypress:open
+                    npm install && npm run cypress:run
                     echo 'Need to publish test results'
                     pwd
                     ls -lart
