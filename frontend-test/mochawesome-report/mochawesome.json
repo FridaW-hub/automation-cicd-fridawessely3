@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-25T21:44:06.986Z",
+    "end": "2021-04-25T21:44:20.143Z",
+    "duration": 13157,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2b2d89c5-5103-4109-a450-20019ceb484f",
+      "title": "",
+      "fullFile": "cypress/integration/examples/regression-po.spec.js",
+      "file": "cypress/integration/examples/regression-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "210eeead-a92c-4fc6-9968-10e8e54f74ad",
+          "title": "Test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform login and logout",
+              "fullTitle": "Test suite Perform login and logout",
+              "timedOut": null,
+              "duration": 3116,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.percySnapshot('login-page');\nindexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\ncy.percySnapshot('dashboard-page');\ndashBoardFuncs.performLogout(cy, 'Login');\ncy.percySnapshot('logged-out');",
+              "err": {},
+              "uuid": "2f76c76d-55ed-4b48-b545-cf03213af77e",
+              "parentUUID": "210eeead-a92c-4fc6-9968-10e8e54f74ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Perform unvalid login",
+              "fullTitle": "Test suite Perform unvalid login",
+              "timedOut": null,
+              "duration": 1738,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performUnvalidLogin(cy, targets.username, targets.unvalidPassword);\ncy.percySnapshot('unvalid-login');",
+              "err": {},
+              "uuid": "1639085b-1e80-46aa-a2b5-83acd8ecc0a6",
+              "parentUUID": "210eeead-a92c-4fc6-9968-10e8e54f74ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "View Rooms",
+              "fullTitle": "Test suite View Rooms",
+              "timedOut": null,
+              "duration": 2244,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\ndashBoardFuncs.viewRooms(cy, 'Rooms');\ncy.percySnapshot('rooms-overview-page');\nroomsOverviewFuncs.backToDashboard(cy, 'Tester Hotel Overview');\ndashBoardFuncs.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "6f707153-5a50-4532-9990-1edb24670e0d",
+              "parentUUID": "210eeead-a92c-4fc6-9968-10e8e54f74ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create Room",
+              "fullTitle": "Test suite Create Room",
+              "timedOut": null,
+              "duration": 3050,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\ndashBoardFuncs.viewRooms(cy, 'Rooms');\nroomsOverviewFuncs.createNewRoom(cy, 'New Room');\ncreateRoomFuncs.createNewRoom(cy, 'Double', '701', '7', '400', 'sea_view');\nroomsOverviewFuncs.validateLastRoom(cy, '701', 'Category: double', 'Available: true', 'Price: 400kr', 'sea view');\nroomsOverviewFuncs.backToDashboard(cy, 'Tester Hotel Overview');\ndashBoardFuncs.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "cece3cf6-57f9-4bff-8158-6153703900b4",
+              "parentUUID": "210eeead-a92c-4fc6-9968-10e8e54f74ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "View Client",
+              "fullTitle": "Test suite View Client",
+              "timedOut": null,
+              "duration": 1813,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\ndashBoardFuncs.viewClient(cy, 'Clients');\nclientOverviewFuncs.backToDashboard(cy, 'Tester Hotel Overview');\ndashBoardFuncs.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "21c68a70-0474-4db5-b4bb-e95fe72fd0d3",
+              "parentUUID": "210eeead-a92c-4fc6-9968-10e8e54f74ad",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2f76c76d-55ed-4b48-b545-cf03213af77e",
+            "1639085b-1e80-46aa-a2b5-83acd8ecc0a6",
+            "6f707153-5a50-4532-9990-1edb24670e0d",
+            "cece3cf6-57f9-4bff-8158-6153703900b4",
+            "21c68a70-0474-4db5-b4bb-e95fe72fd0d3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11961,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

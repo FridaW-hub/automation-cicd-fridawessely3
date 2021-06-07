@@ -1,0 +1,21 @@
+{
+  "name": "frontend-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test:vrt": "percy exec cypress run --spec 'cypress/integration/examples/visual-regression.spec.js'",
+    "test:vrt2": "percy exec cypress run --spec 'cypress/integration/examples/regression-po.spec.js'",
+    "cypress:run": "cypress run --reporter mochawesome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@percy/cli": "^1.0.0-beta.48",
+    "@percy/cypress": "^3.1.0",
+    "cypress": "^7.1.0",
+    "mochawesome": "^6.2.2"
+  }
+}
